@@ -24,7 +24,7 @@ export default class App extends Component<Props> {
     point9: "#FFFFFF",
   };
   _cachedPassword = ''
-  
+
   componentDidMount() {
     this._cachedPassword = '01234' //get cached gesture password
   }
@@ -123,54 +123,54 @@ export default class App extends Component<Props> {
     // Alert.alert('password is ' + password)
   }
 
-  _renderDescription = () => {
-    return (
-      <View style={{ height: 158, paddingBottom: 10, justifyContent: 'flex-end', alignItems: 'center', }}>
-        {this._renderThumbnails()}
-        <Text
-          style={{ fontFamily: '.HelveticaNeueInterface-MediumP4', fontSize: 14, marginVertical: 6, color: this.state.messageColor }}>{this.state.message}</Text>
-      </View>
-    )
-  }
-  _renderThumbnails() {
-    let thumbnails = []
-    for (let i = 0; i < 9; i++) {
-      let active = ~this.state.password.indexOf(i)
-      thumbnails.push((
-        <View
-          key={'thumb-' + i}
-          style={[
-            { width: 8, height: 8, margin: 2, borderRadius: 8, },
-            active ? { backgroundColor: '#00AAEF' } : { borderWidth: 1, borderColor: '#A9A9A9' }
-          ]}
-        />
-      ))
-    }
-    return (
-      <View style={{ width: 38, flexDirection: 'row', flexWrap: 'wrap' }}>
-        {thumbnails}
-      </View>
-    )
-  }
+  // _renderDescription = () => {
+  //   return (
+  //     <View style={{ height: 158, paddingBottom: 10, justifyContent: 'flex-end', alignItems: 'center', }}>
+  //       {this._renderThumbnails()}
+  //       <Text
+  //         style={{ fontFamily: '.HelveticaNeueInterface-MediumP4', fontSize: 14, marginVertical: 6, color: this.state.messageColor }}>{this.state.message}</Text>
+  //     </View>
+  //   )
+  // }
+  // _renderThumbnails() {
+  //   let thumbnails = []
+  //   for (let i = 0; i < 9; i++) {
+  //     let active = ~this.state.password.indexOf(i)
+  //     thumbnails.push((
+  //       <View
+  //         key={'thumb-' + i}
+  //         style={[
+  //           { width: 8, height: 8, margin: 2, borderRadius: 8, },
+  //           active ? { backgroundColor: '#00AAEF' } : { borderWidth: 1, borderColor: '#A9A9A9' }
+  //         ]}
+  //       />
+  //     ))
+  //   }
+  //   return (
+  //     <View style={{ width: 38, flexDirection: 'row', flexWrap: 'wrap' }}>
+  //       {thumbnails}
+  //     </View>
+  //   )
+  // }
 
 
-  _renderActions = () => {
-    return (
-      <View
-        style={{ position: 'absolute', bottom: 0, flex: 1, justifyContent: 'space-between', flexDirection: 'row', width: Dimensions.get('window').width, }}>
-        <Button
-          style={{ margin: 10, height: 40, justifyContent: 'center', }}
-          textStyle={{ fontSize: 14, color: '#A9A9A9' }}>
-          Forget password
-        </Button>
-        <Button
-          style={{ margin: 10, height: 40, justifyContent: 'center', }}
-          textStyle={{ fontSize: 14, color: '#A9A9A9' }}>
-          Login other accounts
-        </Button>
-      </View>
-    )
-  }
+  // _renderActions = () => {
+  //   return (
+  //     <View
+  //       style={{ position: 'absolute', bottom: 0, flex: 1, justifyContent: 'space-between', flexDirection: 'row', width: Dimensions.get('window').width, }}>
+  //       <Button
+  //         style={{ margin: 10, height: 40, justifyContent: 'center', }}
+  //         textStyle={{ fontSize: 14, color: '#A9A9A9' }}>
+  //         Forget password
+  //       </Button>
+  //       <Button
+  //         style={{ margin: 10, height: 40, justifyContent: 'center', }}
+  //         textStyle={{ fontSize: 14, color: '#A9A9A9' }}>
+  //         Login other accounts
+  //       </Button>
+  //     </View>
+  //   )
+  // }
 
   _resetHeadPoint = () => {
     this.setState({
