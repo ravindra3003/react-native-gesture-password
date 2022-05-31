@@ -13,8 +13,6 @@ export default class App extends Component<Props> {
     isWarning: false,
     password: '',
     thumbnails: [],
-    message: 'Verify your gesture password',
-    messageColor: '#A9A9A9',
     point1: "#FFFFFF",
     point2: "#FFFFFF",
     point3: "#FFFFFF",
