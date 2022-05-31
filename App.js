@@ -1,3 +1,5 @@
+//Ravindra Nakarani
+
 import React, { Component } from 'react';
 import { Dimensions, StyleSheet, Text, View, Alert } from 'react-native';
 import OkGesturePassword from "react-native-ok-gesture-password";
